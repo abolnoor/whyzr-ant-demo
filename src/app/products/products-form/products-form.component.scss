@@ -1,0 +1,71 @@
+:host {
+    background: #f5f5f5;
+    overflow: hidden;
+    // padding: 24px;
+    display: block;
+  }
+
+  .card-container ::ng-deep p {
+    margin: 0;
+  }
+  .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
+    // height: 120px;
+    margin-top: -16px;
+  }
+  .card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+    background: #fff;
+    padding: 16px;
+  }
+  .card-container ::ng-deep > .ant-tabs-card > .ant-tabs-nav::before {
+    display: none;
+  }
+  .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab {
+    border-color: transparent;
+    background: transparent;
+  }
+  .card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab-active {
+    border-color: #fff;
+    background: #fff;
+  }
+
+
+  [nz-form] {
+    max-width: 600px;
+  }
+
+
+  .dynamic-delete-button {
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    font-size: 24px;
+    color: #999;
+    transition: all 0.3s;
+  }
+
+  .dynamic-delete-button:hover {
+    color: #777;
+  }
+
+  .passenger-input {
+    width: 60%;
+    margin-right: 8px;
+  }
+
+  [nz-form] {
+    max-width: 600px;
+  }
+
+  .add-button {
+    width: 60%;
+  }
+
+  [nz-radio] {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+  }
+  input {
+    width: 100px;
+    margin-left: 10px;
+  }
