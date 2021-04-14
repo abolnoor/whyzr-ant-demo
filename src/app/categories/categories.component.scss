@@ -1,0 +1,35 @@
+nz-tree {
+    overflow: hidden;
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+
+  .ant-tree{
+      background: none;
+  }
+  
+
+  .custom-node {
+    cursor: pointer;
+    line-height: 24px;
+    // margin-left: 4px;
+    display: inline-block;
+    width: 100%;
+
+    background: white;
+    padding: 12px;
+    margin: 2px 0;
+    border-radius: 4px;
+  }
+.custom-node:hover{
+    background-color: none;
+}
+
+
+  .node-name {
+    margin-left: 4px;
+  }
+
+  .node-action {
+    
+  }

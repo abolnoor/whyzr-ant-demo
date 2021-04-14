@@ -18,7 +18,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { ar_EG } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import ar from '@angular/common/locales/ar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IconsProviderModule } from './icons-provider.module';
 
@@ -43,7 +43,7 @@ registerLocaleData(ar);
     SettingManagementConfigModule.forRoot(),
     NgxsModule.forRoot(),
     ThemeBasicModule.forRoot(),
-    FormsModule,
+    FormsModule,ReactiveFormsModule,
     HttpClientModule,
     IconsProviderModule,
     AppNgZorroAntdModule

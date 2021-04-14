@@ -1,16 +1,11 @@
-.logo {
-  height: 37px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
-  text-align: left !important;
-  direction: ltr;
+nz-layout {
+  min-height: 100vh;
 }
 
-.logo .brand-name{
-  color: #768192!important;
-  font-size: 1.5rem;
-  font-weight: 700;
-  white-space: nowrap;
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
 }
 
 nz-header {
@@ -19,17 +14,17 @@ nz-header {
 }
 
 nz-content {
-  margin: 0 16px;
+  margin: 0 24px;
 }
 
 nz-breadcrumb {
-  margin: 16px 0;
+  margin: 0;
 }
 
 .inner-content {
   // padding: 24px;
-  padding: 0;
-  background: #fff;
+  //padding-top: 12px;
+  // background: #fff;
   min-height: 360px;
 }
 
@@ -37,43 +32,3 @@ nz-footer {
   text-align: center;
 }
 
-.ant-layout-header{
-  background-color: #fff;
-  padding: 0;
-}
-
-
-// page header
-
-.content {
-  flex: 1;
-}
-
-.content p {
-  margin-bottom: 1em;
-}
-
-.content-link a {
-  margin-right: 16px;
-}
-
-.content-link a img {
-  margin-right: 8px;
-}
-
-.content-image {
-  margin: 0 0 0 60px;
-  display: flex;
-  align-items: center;
-}
-
-.content-image img {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .content-image {
-    flex: 100%;
-    margin: 24px 0 0;
-  }
-}
