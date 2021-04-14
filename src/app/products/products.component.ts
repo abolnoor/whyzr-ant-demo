@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { ProductsFormComponent } from './products-form/products-form.component';
 
 @Component({
   selector: 'app-products',
@@ -11,7 +14,8 @@ export class ProductsComponent implements OnInit {
     "totalCount":21,
     "items":[]
  };
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+   private router: Router, private modal: NzModalService, private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {
     this.change();
@@ -3084,5 +3088,44 @@ export class ProductsComponent implements OnInit {
       }, 1000);
     }
   }
+
+  
+
+
+  editItem(item){
+     
+   this.router.navigate([`/products/edit/${item.id}`]);
+  }
+
+
+  createComponentModal(): void {
+   const modal = this.modal.create({
+     nzTitle: 'Modal Title',
+     nzContent: ProductsFormComponent,
+     nzViewContainerRef: this.viewContainerRef,
+     nzComponentParams: {
+       title: 'title in component',
+       subtitle: 'component sub title，will be changed after 2 sec'
+     },
+     nzOnOk: () => new Promise(resolve => setTimeout(resolve, 1000)),
+     nzFooter: [
+       {
+         label: 'Save',
+         onClick: componentInstance => {
+           componentInstance!.title = 'title in inner component is changed';
+         }
+       }
+     ]
+   });
+   const instance = modal.getContentComponent();
+   modal.afterOpen.subscribe(() => console.log('[afterOpen] emitted!'));
+   // Return a result when closed
+   modal.afterClose.subscribe(result => console.log('[afterClose] The result is:', result));
+
+   // delay until modal instance created
+   setTimeout(() => {
+     instance.subtitle = 'sub title is changed';
+   }, 2000);
+ }
 
 }

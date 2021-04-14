@@ -30,6 +30,7 @@ registerLocaleData(ar);
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule.forRoot({
@@ -43,7 +44,7 @@ registerLocaleData(ar);
     SettingManagementConfigModule.forRoot(),
     NgxsModule.forRoot(),
     ThemeBasicModule.forRoot(),
-    FormsModule,ReactiveFormsModule,
+    
     HttpClientModule,
     IconsProviderModule,
     AppNgZorroAntdModule
