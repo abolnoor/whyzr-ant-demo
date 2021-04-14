@@ -10,6 +10,10 @@
       </nz-list-item-meta-description>
     </nz-list-item-meta>
     <span nz-typography><strong>${{item.itemDetails[0].price}}</strong></span>
+    <ul nz-list-item-actions>
+      <nz-list-item-action><a (click)="null">edit</a></nz-list-item-action>
+      <nz-list-item-action><a (click)="null">more</a></nz-list-item-action>
+    </ul>
   </nz-list-item>
   <nz-list-empty *ngIf="data.items.length === 0"></nz-list-empty>
 </nz-list>
