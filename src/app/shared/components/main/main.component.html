@@ -5,16 +5,16 @@
       <span class="brand-name">Whyzr</span>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-submenu nzTitle="الفهرس" nzIcon="unordered-list"> 
+      <li nz-submenu nzTitle="الفهرس" nzIcon="unordered-list">
         <ul>
-          <li nz-menu-item  [routerLink]="'/products'">المنتجات</li>
-          <li nz-menu-item>التصنيفات</li>
+          <li nz-menu-item [routerLink]="'/products'">المنتجات</li>
+          <li nz-menu-item [routerLink]="'/categories'">التصنيفات</li>
           <li nz-menu-item>الطلبات</li>
         </ul>
       </li>
       <li nz-submenu nzTitle="الإعدادات" nzIcon="setting">
         <ul>
-          <li nz-menu-item>الإعدادات العامة</li>
+          <li nz-menu-item [routerLink]="'/settings'">الإعدادات العامة</li>
           <li nz-menu-item>إعدادات المخزن</li>
         </ul>
       </li>
@@ -29,15 +29,15 @@
     <nz-content>
 
       <nz-page-header nzBackIcon class="site-page-header">
-        <!--breadcrumb-->
-        <nz-breadcrumb nz-page-header-breadcrumb>
-          <nz-breadcrumb-item>المخزن</nz-breadcrumb-item>
-          <nz-breadcrumb-item>
-            <a>الفهرس</a>
-          </nz-breadcrumb-item>
-          <nz-breadcrumb-item>المنتجات</nz-breadcrumb-item>
-        </nz-breadcrumb>
-
+              <!--breadcrumb-->
+              <nz-breadcrumb nz-page-header-breadcrumb>
+                <nz-breadcrumb-item>المخزن</nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                  <a>الفهرس</a>
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>المنتجات</nz-breadcrumb-item>
+              </nz-breadcrumb>
+      
         <!--avatar-->
         <nz-avatar nz-page-header-avatar nzSrc="https://avatars0.githubusercontent.com/u/22736418?s=88&v=4">
         </nz-avatar>
@@ -50,9 +50,9 @@
 
         <!--extra-->
         <nz-page-header-extra>
-         
+
           <button nz-button nzType="primary">إضافة</button>
-          
+
         </nz-page-header-extra>
 
       </nz-page-header>

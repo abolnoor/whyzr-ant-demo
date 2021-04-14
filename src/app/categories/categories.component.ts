@@ -184,13 +184,14 @@ export class CategoriesComponent implements OnInit {
       return acc;
     }, {});
 
-     
+
     this.data.items.forEach(el => {
       el.title = el.name;
-      el.key= el.id;
-      el.isLeaf= true;
+      el.key = el.id;
+      el.isLeaf = false;
+      el.expanded =true;
       // Handle the root element
-      if (el.parentId === null) {        
+      if (el.parentId === null) {
         this.nodes.push(el);
         return;
       }
@@ -198,7 +199,7 @@ export class CategoriesComponent implements OnInit {
       const parentEl = this.data.items[idMapping[el.parentId]];
       // Add our current el to its parent's `children` array
       parentEl.children = [...(parentEl.children || []), el];
-      parentEl.isLeaf= false;
+      parentEl.isLeaf = false;
     });
 
   }
