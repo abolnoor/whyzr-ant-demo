@@ -1,0 +1,15 @@
+<!-- <div style="margin-bottom: 8px;"><button nz-button (click)="change()">Switch Data</button></div> -->
+<nz-list nzItemLayout="horizontal" [nzLoading]="loading">
+  <nz-list-item *ngFor="let item of data.items">
+    <nz-list-item-meta [nzAvatar]="item.images?item.images:'https://demo.whyzr.com/assets/image_default.png'">
+      <nz-list-item-meta-title>
+        <a href="https://ng.ant.design">{{ item.name }}</a> <span style="margin:0 8px" nz-typography nzType="secondary">{{item.itemDetails[0].sku}}</span>
+      </nz-list-item-meta-title>
+      <nz-list-item-meta-description >
+
+      </nz-list-item-meta-description>
+    </nz-list-item-meta>
+    <span nz-typography><strong>${{item.itemDetails[0].price}}</strong></span>
+  </nz-list-item>
+  <nz-list-empty *ngIf="data.items.length === 0"></nz-list-empty>
+</nz-list>

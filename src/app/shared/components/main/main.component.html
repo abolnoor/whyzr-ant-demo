@@ -1,0 +1,68 @@
+<nz-layout>
+  <nz-sider nzCollapsible nzWidth="200px" [nzReverseArrow]="true">
+    <div class="logo">
+      <img class="float-left" nz-image width="44px" height="26px" src="assets/whyzr-logo.png" alt="" />
+      <span class="brand-name">Whyzr</span>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-submenu nzTitle="الفهرس" nzIcon="list">
+        <ul>
+          <li nz-menu-item  [routerLink]="'/products'">المنتجات</li>
+          <li nz-menu-item>التصنيفات</li>
+          <li nz-menu-item>الطلبات</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="الإعدادات" nzIcon="settings">
+        <ul>
+          <li nz-menu-item>الإعدادات العامة</li>
+          <li nz-menu-item>إعدادات المخزن</li>
+        </ul>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="about"></i>
+        <span>حول</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+
+    </nz-header>
+    <nz-content>
+
+      <nz-page-header nzBackIcon class="site-page-header">
+        <!--breadcrumb-->
+        <nz-breadcrumb nz-page-header-breadcrumb>
+          <nz-breadcrumb-item>المخزن</nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+            <a>الفهرس</a>
+          </nz-breadcrumb-item>
+          <nz-breadcrumb-item>المنتجات</nz-breadcrumb-item>
+        </nz-breadcrumb>
+
+        <!--avatar-->
+        <nz-avatar nz-page-header-avatar nzSrc="https://avatars0.githubusercontent.com/u/22736418?s=88&v=4">
+        </nz-avatar>
+
+        <!--title-->
+        <nz-page-header-title>المنتجات</nz-page-header-title>
+
+        <!--subtitle-->
+        <nz-page-header-subtitle>إدارة المنتجات</nz-page-header-subtitle>
+
+        <!--extra-->
+        <nz-page-header-extra>
+         
+          <button nz-button nzType="primary">إضافة</button>
+          
+        </nz-page-header-extra>
+
+      </nz-page-header>
+
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+  </nz-layout>
+</nz-layout>

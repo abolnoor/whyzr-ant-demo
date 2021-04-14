@@ -1,0 +1,76 @@
+.logo {
+  height: 37px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+  text-align: left !important;
+  direction: ltr;
+}
+
+.logo .brand-name{
+  color: #768192!important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+nz-header {
+  background: #fff;
+  padding: 0;
+}
+
+nz-content {
+  // margin: 0 16px;
+}
+
+nz-breadcrumb {
+  margin: 16px 0;
+}
+
+.inner-content {
+  // padding: 24px;
+  padding: 12px 24px;
+  background: #fff;
+  min-height: 360px;
+}
+
+nz-footer {
+  text-align: center;
+}
+
+
+
+
+// page header
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  margin-bottom: 1em;
+}
+
+.content-link a {
+  margin-right: 16px;
+}
+
+.content-link a img {
+  margin-right: 8px;
+}
+
+.content-image {
+  margin: 0 0 0 60px;
+  display: flex;
+  align-items: center;
+}
+
+.content-image img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .content-image {
+    flex: 100%;
+    margin: 24px 0 0;
+  }
+}
