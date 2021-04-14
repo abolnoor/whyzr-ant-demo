@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NzDropdownMenuComponent } from 'ng-zorro-antd/dropdown';
+import { NzContextMenuService, NzDropdownMenuComponent } from 'ng-zorro-antd/dropdown';
 import { NzFormatEmitEvent } from 'ng-zorro-antd/tree';
 
 @Component({
@@ -176,8 +176,7 @@ export class CategoriesComponent implements OnInit {
     ]
   };
   nodes = [];
-  nzContextMenuService: any;
-  constructor() { }
+  constructor(private nzContextMenuService: NzContextMenuService) { }
 
   ngOnInit(): void {
     const idMapping = this.data.items.reduce((acc, el, i) => {

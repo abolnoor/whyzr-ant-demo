@@ -1,8 +1,7 @@
 <nz-tree nzBlockNode nzDraggable nzBlockNode (nzOnDrop)="nzEvent($event)" (nzOnDragOver)="nzEventOver($event)" [nzData]="nodes"
     [nzTreeTemplate]="nzTreeTemplate"></nz-tree>
 <ng-template #nzTreeTemplate let-node let-origin="origin">
-    <span class="custom-node">
-        <span *ngIf="!node.isLeaf" (contextmenu)="contextMenu($event, menu)">
+        <div class="custom-node d-flex justify-content-between" (contextmenu)="contextMenu($event, menu)">
            
             <span class="node-name">{{ node.title }}</span>
             <span class="node-action">
@@ -10,16 +9,7 @@
                 </nz-switch>
 
             </span>
-        </span>
-        <span *ngIf="node.isLeaf" (contextmenu)="contextMenu($event, menu)">
-            <span class="node-name">{{ node.title }}</span>
-            <span class="node-action">
-                <nz-switch >
-                </nz-switch>
-                
-            </span>
-        </span>
-    </span>
+        </div>
 </ng-template>
 <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu>
