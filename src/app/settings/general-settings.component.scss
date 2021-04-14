@@ -3,7 +3,40 @@
 }
 .action-card{
     width: 23%;
+    margin: 4px;
+    
+    overflow: hidden;
+    color: #555;
+    text-align: center;
+    
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out;
 }
+
+.action-card:hover{
+    color: #fff;
+    background-color: #1890ff;
+}
+
+
+.action-card .action-icon{
+    margin: 12px 0 8px;
+    font-size: 24px;
+    transition: transform .3s ease-in-out;
+
+}
+
+.action-card:hover .action-icon{
+    transform: scale(1.6);
+}
+
+.action-card .action-name{
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+}
+
 // .ant-card 
 // .ant-card-grid{
 //     background: #fff;
