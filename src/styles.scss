@@ -28,3 +28,39 @@
 .ant-layout {
   min-height: 100vh;
 }
+
+nz-layout {
+  min-height: 100vh;
+}
+
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+nz-header {
+  background: #fff !important;
+  padding: 0;
+}
+
+nz-content {
+  margin: 0 24px;
+}
+
+nz-breadcrumb {
+  margin: 0;
+}
+
+.inner-content {
+  // padding: 24px;
+  //padding-top: 12px;
+  // background: #fff;
+  min-height: 360px;
+  padding: 16px 24px;
+}
+
+nz-footer {
+  text-align: center;
+}
+
