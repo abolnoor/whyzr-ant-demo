@@ -1,10 +1,14 @@
 <nz-layout>
-  <nz-sider nzCollapsible nzWidth="200px" [nzReverseArrow]="true">
+  <nz-sider nzCollapsible [nzReverseArrow]="isRtl" class="d-none d-lg-flex">
     <div class="logo">
       <img class="float-left" nz-image width="44px" height="26px" src="assets/whyzr-logo.png" alt="" />
       <span class="brand-name">Whyzr</span>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item routerLink="/">
+        <i nz-icon nzType="question-circle"></i>
+        <span>الرئيسية</span>
+      </li>
       <li nz-submenu nzTitle="الفهرس" nzIcon="unordered-list">
         <ul>
           <li nz-menu-item [routerLink]="'/products'">المنتجات</li>

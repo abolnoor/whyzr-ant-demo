@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, OnInit, ViewEncapsulation } from '@angular/core';
+import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'app-main',
@@ -6,9 +7,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent extends BaseComponent implements OnInit {
   isCollapsed = false;
-  constructor() { }
+
+  constructor(
+    injector: Injector
+  ) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }

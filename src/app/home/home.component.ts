@@ -1,20 +1,30 @@
 import { AuthService } from '@abp/ng.core';
-import { Component } from '@angular/core';
+import { Component, Injector } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
+import { BaseComponent } from '../shared/components/base.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  get hasLoggedIn(): boolean {
-    return this.oAuthService.hasValidAccessToken();
+export class HomeComponent extends BaseComponent {
+
+  constructor(
+    injector: Injector
+  ) {
+    super(injector);
   }
 
-  constructor(private oAuthService: OAuthService, private authService: AuthService) {}
-
   login() {
-    this.authService.navigateToLogin();
+    this.utility.oAuthService.initLoginFlow();
+  }
+
+  changelang() {
+    if (this.utility.currentCulture.cultureName == 'ar') {
+      this.utility.setLanguage('en');
+    } else {
+      this.utility.setLanguage('ar');
+    }
   }
 }
