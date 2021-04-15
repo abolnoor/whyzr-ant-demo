@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { NzModalRef } from 'ng-zorro-antd/modal';
+// import { NzModalRef } from 'ng-zorro-antd/modal';
 
 @Component({
   selector: 'app-products-form',
@@ -48,15 +48,15 @@ export class ProductsFormComponent implements OnInit {
     console.log(this.validateForm.value);
   }
 
-  constructor(private fb: FormBuilder, private modal: NzModalRef) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({});
     this.addField();
   }
 
-  destroyModal(): void {
-    this.modal.destroy({ data: 'this the result data' });
-  }
+  // destroyModal(): void {
+  //   this.modal.destroy({ data: 'this the result data' });
+  // }
 
 }
