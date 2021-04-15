@@ -25,47 +25,42 @@
   }
 }
 
-.ant-layout {
-  min-height: 100vh;
+ svg {
+  vertical-align: initial  !important;
 }
 
-nz-layout {
-  min-height: 100vh;
+.ant-layout-sider-zero-width-trigger-right {
+  right: auto;
 }
 
+
+
+// layout
 .logo {
   height: 32px;
   background: rgba(255, 255, 255, 0.2);
   margin: 16px;
 }
 
-nz-header {
-  background: #fff !important;
+nz-header.ant-layout-header {
+  background: #fff;
   padding: 0;
 }
 
 nz-content {
-  margin: 0 24px;
+  margin: 0 16px;
 }
 
-nz-breadcrumb {
-  margin: 0;
-}
+// nz-breadcrumb {
+//   margin: 16px 0;
+// }
 
 .inner-content {
   // padding: 24px;
-  //padding-top: 12px;
-  // background: #fff;
+  background: none;
   min-height: 360px;
-  padding: 16px 24px;
 }
 
 nz-footer {
   text-align: center;
-}
-
-
-
- svg {
-  vertical-align: initial  !important;
 }

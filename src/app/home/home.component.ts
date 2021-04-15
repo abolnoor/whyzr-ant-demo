@@ -20,11 +20,5 @@ export class HomeComponent extends BaseComponent {
     this.utility.oAuthService.initLoginFlow();
   }
 
-  changelang() {
-    if (this.utility.currentCulture.cultureName == 'ar') {
-      this.utility.setLanguage('en');
-    } else {
-      this.utility.setLanguage('ar');
-    }
-  }
+  
 }

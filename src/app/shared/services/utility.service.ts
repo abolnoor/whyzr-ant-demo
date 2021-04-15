@@ -13,6 +13,7 @@ import { Injectable, Injector } from '@angular/core';
 import { Router } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { DOCUMENT } from '@angular/common';
+import { NzDrawerService } from 'ng-zorro-antd/drawer';
 
 @Injectable({
   providedIn: 'root',
@@ -54,7 +55,7 @@ export class UtilityService {
   public appConfigService: ApplicationConfigurationService;
   public oAuthService: OAuthService;
   public permissionService: PermissionService;
-
+  public drawerService: NzDrawerService;
   get hasLoggedIn(): boolean {
     return this.oAuthService.hasValidAccessToken();
   }
@@ -72,6 +73,7 @@ export class UtilityService {
     this.appConfigService = injector.get(ApplicationConfigurationService);
     this.route = injector.get(Router);
     this.permissionService = injector.get(PermissionService);
+    this.drawerService=  injector.get(NzDrawerService);
   }
 
   public get currentCulture(): CurrentCultureDto {
@@ -226,5 +228,17 @@ export class UtilityService {
     } else {
       this.populatePageTitle();
     }
+  }
+
+  openTemplate(nzDrawerOptions): void {
+    const drawerRef = this.drawerService.create(nzDrawerOptions);
+
+    drawerRef.afterOpen.subscribe(() => {
+      console.log('Drawer(Template) open');
+    });
+
+    drawerRef.afterClose.subscribe(() => {
+      console.log('Drawer(Template) close');
+    });
   }
 }

@@ -1,5 +1,5 @@
 <nz-layout>
-  <nz-sider nzCollapsible [nzReverseArrow]="isRtl" class="d-none d-lg-flex">
+  <nz-sider nzCollapsible nzWidth="200px" [nzReverseArrow]="isRtl" class="d-none d-lg-block">
     <div class="logo">
       <img class="float-left" nz-image width="44px" height="26px" src="assets/whyzr-logo.png" alt="" />
       <span class="brand-name">Whyzr</span>
@@ -29,19 +29,22 @@
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header></nz-header>
+    <nz-header class="d-flex align-items-center justify-content-between px-3 px-lg-4">
+      <button class="d-lg-none" nz-button nzType="primary" (click)="openTemplate()"><i nz-icon nzType="bars" ></i></button>
+      <button nz-button nzShape="circle" (click)="changelang()"><i nz-icon nzType="global" nzTheme="outline"></i></button>
+    </nz-header>
     <nz-content>
 
-      <nz-page-header nzBackIcon class="site-page-header">
-              <!--breadcrumb-->
-              <nz-breadcrumb nz-page-header-breadcrumb>
-                <nz-breadcrumb-item>المخزن</nz-breadcrumb-item>
-                <nz-breadcrumb-item>
-                  <a>الفهرس</a>
-                </nz-breadcrumb-item>
-                <nz-breadcrumb-item>المنتجات</nz-breadcrumb-item>
-              </nz-breadcrumb>
-      
+      <nz-page-header nzBackIcon class="site-page-header pb-2 pb-lg-3 pt-1 pt-lg-2 px-1 px-lg-2">
+        <!--breadcrumb-->
+        <nz-breadcrumb nz-page-header-breadcrumb>
+          <nz-breadcrumb-item>المخزن</nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+            <a>الفهرس</a>
+          </nz-breadcrumb-item>
+          <nz-breadcrumb-item>المنتجات</nz-breadcrumb-item>
+        </nz-breadcrumb>
+
         <!--avatar-->
         <nz-avatar nz-page-header-avatar nzIcon="shopping">
         </nz-avatar>
@@ -61,10 +64,41 @@
 
       </nz-page-header>
 
-      <div class="inner-content">
+      <div class="inner-content px-1 px-lg-2">
         <router-outlet></router-outlet>
       </div>
     </nz-content>
     <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
   </nz-layout>
 </nz-layout>
+
+<ng-template #drawerTemplate let-data let-drawerRef="drawerRef">
+  <div class="logo">
+    <img class="float-left" nz-image width="44px" height="26px" src="assets/whyzr-logo.png" alt="" />
+    <span class="brand-name">Whyzr</span>
+  </div>
+  <ul nz-menu nzTheme="dark" nzMode="inline">
+    <li nz-menu-item routerLink="/">
+      <i nz-icon nzType="question-circle"></i>
+      <span>الرئيسية</span>
+    </li>
+    <li nz-submenu nzTitle="الفهرس" nzIcon="unordered-list">
+      <ul>
+        <li nz-menu-item [routerLink]="'/products'">المنتجات</li>
+        <li nz-menu-item [routerLink]="'/categories'">التصنيفات</li>
+        <li nz-menu-item>الطلبات</li>
+      </ul>
+    </li>
+    <li nz-submenu nzTitle="الإعدادات" nzIcon="setting">
+      <ul>
+        <li nz-menu-item [routerLink]="'/settings'">الإعدادات العامة</li>
+        <li nz-menu-item>إعدادات المخزن</li>
+      </ul>
+    </li>
+    <li nz-menu-item>
+      <i nz-icon nzType="question-circle"></i>
+      <span>حول</span>
+    </li>
+  </ul>
+
+</ng-template>
