@@ -16,5 +16,5 @@
       <nz-list-item-action><a (click)="null">more</a></nz-list-item-action>
     </ul>
   </nz-list-item>
-  <nz-list-empty *ngIf="data.items.length === 0"></nz-list-empty>
+  <nz-list-empty *ngIf="data.items.length === 0 && !loading"></nz-list-empty>
 </nz-list>
