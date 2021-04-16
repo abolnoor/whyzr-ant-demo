@@ -14,7 +14,7 @@ export class MainComponent extends BaseComponent implements OnInit {
     $implicit: {};
     drawerRef: NzDrawerRef<string>;
   }>;
-  
+
   constructor(
     injector: Injector
   ) {
@@ -32,7 +32,7 @@ export class MainComponent extends BaseComponent implements OnInit {
     this.options = value ? [value, value + value, value + value + value] : [];
   }
 
-  openTemplate(){
+  openTemplate() {
     this.utility.openTemplate({
       nzContent: this.drawerTemplate,
       nzBodyStyle: {

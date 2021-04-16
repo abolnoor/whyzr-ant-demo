@@ -25,17 +25,20 @@
   }
 }
 
- svg {
-  vertical-align: initial  !important;
+svg {
+  vertical-align: initial !important;
 }
 
 .ant-layout-sider-zero-width-trigger-right {
   right: auto;
 }
 
-
-
 // layout
+
+.ant-layout {
+  min-height: 100vh;
+}
+
 .logo {
   height: 32px;
   background: rgba(255, 255, 255, 0.2);
